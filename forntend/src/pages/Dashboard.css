@@ -1,0 +1,149 @@
+.dashboard {
+  padding: 100px 40px 40px;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dash-header h1 {
+  color: #2d3436;
+  font-size: 28px;
+}
+
+.dash-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #00b894;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #019875;
+}
+
+.btn-logout {
+  background: #dfe6e9;
+  color: #636e72;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background: #b2bec3;
+  color: #2d3436;
+}
+
+.dash-loading {
+  text-align: center;
+  font-size: 18px;
+  color: #636e72;
+  margin-top: 50px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 100px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.empty-state p {
+  font-size: 18px;
+  color: #636e72;
+  margin-bottom: 20px;
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.request-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.request-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  border-bottom-left-radius: 12px;
+}
+
+.request-card h3 {
+  font-size: 14px;
+  color: #b2bec3;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.request-card h3:first-of-type {
+  margin-top: 10px;
+}
+
+.request-card p {
+  color: #2d3436;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.request-image-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.dash-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.mini-upload-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f1f2f6;
+  color: #00b894;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px dashed #00b894;
+  margin-top: 10px;
+}
+
+.mini-upload-btn:hover {
+  background: #00b894;
+  color: white;
+}
