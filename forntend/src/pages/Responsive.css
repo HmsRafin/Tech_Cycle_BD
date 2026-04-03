@@ -1,0 +1,217 @@
+/* Responsive Design - TechCycle BD */
+
+/* --- GLobal Adjustments --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- Laptop & Tablet (1024px and below) --- */
+@media (max-width: 1024px) {
+  .nav-container {
+    max-width: 95%;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features {
+    gap: 20px;
+    padding: 60px 20px;
+  }
+  
+  .card {
+    width: 280px;
+  }
+
+  .static-page {
+    padding: 100px 30px 40px;
+  }
+}
+
+/* --- Tablet & Small Devices (768px and below) --- */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 5px 0;
+  }
+
+  .nav-toggle {
+    display: block !important;
+    cursor: pointer;
+    font-size: 28px;
+    color: #00ffcc;
+    z-index: 1200;
+    line-height: 1;
+    padding: 10px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgba(10, 15, 25, 0.98);
+    backdrop-filter: blur(20px);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+    padding: 50px 20px;
+  }
+
+  .nav-links.mobile-active {
+    right: 0;
+  }
+
+  .nav-links a {
+    margin: 15px 0 !important;
+    font-size: 20px !important;
+    width: 80%;
+    text-align: center;
+    padding: 12px !important;
+  }
+
+  .login-btn, .admin-btn {
+    border-radius: 10px !important;
+  }
+
+  /* Home Page */
+  .hero {
+    height: 90vh;
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    padding: 0 15px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Dashboards */
+  .dashboard {
+    padding: 100px 20px 40px;
+  }
+
+  .dash-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .dash-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .requests-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Static Pages (About, Services, Contact) */
+  .static-page h1 {
+    font-size: 28px;
+  }
+
+  .static-page p {
+    font-size: 16px;
+  }
+
+  /* Schedule Pickup */
+  .schedule-page {
+    padding: 100px 15px 40px;
+  }
+
+  .schedule-card {
+    padding: 30px 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* --- Mobile (480px and below - iPhone SE, etc.) --- */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    width: 80%;
+    padding: 14px;
+  }
+
+  .btn-primary, .btn-logout, .submit-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .dash-header h1 {
+    font-size: 22px;
+  }
+
+  .login-container, .register-container {
+    padding: 30px 20px !important;
+    margin: 100px 15px 40px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .static-page {
+    padding-top: 80px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+}
+
+/* --- Specific iPhone Fixes --- */
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    height: -webkit-fill-available;
+  }
+}

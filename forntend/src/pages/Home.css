@@ -1,0 +1,71 @@
+.home {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+
+ 
+  background:
+    linear-gradient(135deg, rgba(15,32,39,0.7), rgba(44,83,100,0.7)),
+    url('../assets/bd.jpg');
+background-image: url('/images/your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #00ffcc;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: white;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 80px 40px;
+  background: #111;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 255, 204, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

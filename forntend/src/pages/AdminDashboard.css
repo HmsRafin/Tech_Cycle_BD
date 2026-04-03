@@ -1,0 +1,193 @@
+.admin-dashboard {
+  padding: 100px 40px 40px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.admin-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-header h1 {
+  color: #2d3436;
+  font-size: 32px;
+}
+
+.admin-header p {
+  color: #636e72;
+}
+
+.table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 15px;
+  background: #f1f2f6;
+  color: #2d3436;
+  font-weight: 700;
+  border-bottom: 2px solid #dfe6e9;
+}
+
+.admin-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f2f6;
+  color: #2d3436;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.pending { background: #ffeaa7; color: #d35400; }
+.status-badge.approved { background: #55efc4; color: #00b894; }
+.status-badge.rejected { background: #fab1a0; color: #e17055; }
+
+.action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.approve-btn, .reject-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.approve-btn { background: #00b894; color: white; }
+.approve-btn:hover { background: #019875; }
+
+.reject-btn { background: #e74c3c; color: white; }
+.reject-btn:hover { background: #c0392b; }
+
+.done-text {
+  color: #b2bec3;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.admin-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.no-img {
+  color: #b2bec3;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.delete-img-btn {
+  background: #ff7675;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.delete-img-btn:hover {
+  background: #d63031;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #636e72;
+  margin-top: 50px;
+}
+
+/* Image Modal */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  cursor: zoom-out;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: default;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: modalScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.image-modal-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  display: block;
+  border-radius: 8px;
+}
+
+.close-modal {
+  position: absolute;
+  top: -45px;
+  right: -10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.close-modal:hover {
+  color: #ff7675;
+  transform: rotate(90deg);
+}
